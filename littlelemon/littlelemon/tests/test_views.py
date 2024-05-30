@@ -10,12 +10,6 @@ class MenuViewTest(TestCase):
         self.menu_item1 = models.MenuItem.objects.create(title="Tiramisu", price=5.00, inventory=10)
         #self.menu_item2 = models.MenuItem.objects.create(title="Ceasar salad", price=10.00, inventory=5)
 
-    # def test_getall(self):
-    #     response = self.client.get('/restaurant/menu/items')
-    #     menu_items = models.MenuItem.objects.all()
-    #     serializer = serializers.MenuItemSerializer(menu_items, many=True)
-    #     self.assertEqual(response.data, serializer.data)
-    #     self.assertEqual(response.status_code, 200)
     
     def test_getall(self):
         request = RequestFactory().get('/restaurant/menu/items/')
